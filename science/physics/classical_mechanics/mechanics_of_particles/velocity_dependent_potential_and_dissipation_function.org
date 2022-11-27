@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       d9e25f04-951e-4be8-9f5f-9e15a69420bf
+:END:
+#+title: Velocity Dependent Potential and Dissipation Function

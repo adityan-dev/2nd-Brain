@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       db8acc23-9ab8-415d-8187-fbdc76810aa1
+:END:
+#+title: Mechanics of Single Particles
+
+* Newton's Laws of Motion
+:PROPERTIES:
+:ID:       b2a7b5bd-4cd5-413a-bd12-999cdda64a07
+:END:
+Let \(\vec{r}\) be the radius vector of a particle from some given origin and \(\vec{v}\) its vector
+velocity:
+
+\begin{align*}
+\vec{v}=\dfrac{d\vec{r}}{dt}
+\end{align*}
+
+The linear momentum \(\vec{p}\) of the particle is defined as the product of the particle
+mass and its velocity:
+
+\begin{align*}
+\vec{p}=m\vec{v}
+\end{align*}
+
+In consequence of interactions with external objects and fields, the particle may
+experience forces of various types, e.g., gravitational or electrodynamic; the vec­
+tor sum of these forces exerted on the particle is the total force \(\vec{F}\). The mechanics
+of the particle is contained in Newton's second law of motion, which states that
+there exist frames of reference in which the motion of the particle is described by
+the differential equation
+
+\begin{align*}
+\vec{F}=\dfrac{d\vec{p}}{dt}=\dfrac{d}{dt}\left( m\vec{v}\right)
+\end{align*}
+
+In most instances, the mass of the particle is constant and the above Eq. reduces to
+
+
+\begin{align*}
+\vec{F}=m\dfrac{d\vec{v}}{dt}=m\vec{a} \\
+\vec{a}=\dfrac{d^{2}\vec{r}}{dt^{2}}
+\end{align*}
+
+The equation of motion is thus a differential equation of second order, assuming \(\vec{F}\) does not depend on higher-order derivatives.
+
+A reference frame in which these Eqs. are valid is called an inertial or Galilean
+system. Even within classical mechanics the notion of an inertial system is some­
+thing of an idealization. In practice, however, it is usually feasible to set up a co­
+ordinate system that comes as close to the desired properties as may be required.
+For many purposes, a reference frame fixed in Earth (the "laboratory system")
+is a sufficient approximation to an inertial system, while for some astronomical
+purposes it may be necessary to construct an inertial system (or inertial frame) by
+reference to distant galaxies.
+
+Many of the important conclusions of mechanics can be expressed in the form
+of conservation theorems, which indicate under what conditions various mechan­
+ical quantities are constant in time.
+
+
+
+* Conservation of Linear Momentum
+:PROPERTIES:
+:ID:       4c7243ba-bd06-413b-9902-7d9e5cd7a54e
+:END:
+* Conservation of Angular Momentum
+:PROPERTIES:
+:ID:       a8f69f2e-24ed-4a61-896c-e9542117b11a
+:END:

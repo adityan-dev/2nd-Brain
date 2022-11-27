@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       1e23abdc-6d34-4057-9270-f13757d9a07a
+:END:
+#+title: D'Alemberts Principle

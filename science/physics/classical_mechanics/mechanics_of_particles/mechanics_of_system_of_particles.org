@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       0d813d2c-11a7-43da-82ce-d7f7581ee4a1
+:END:
+#+title: Mechanics of System of Particles

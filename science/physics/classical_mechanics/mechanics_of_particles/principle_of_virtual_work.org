@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       a4e61ca8-34f0-4c61-8d3a-64220bbef07d
+:END:
+#+title: Principle of Virtual Work

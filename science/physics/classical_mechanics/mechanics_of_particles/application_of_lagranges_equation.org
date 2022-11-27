@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       ab6eca5d-8b63-41e9-a30f-e674e9a3a605
+:END:
+#+title: Application of Lagrange's Equation

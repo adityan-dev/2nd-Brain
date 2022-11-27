@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       44597b35-f6a7-4769-8827-a1e0de629ea1
+:END:
+#+title: Lagrange's Equation

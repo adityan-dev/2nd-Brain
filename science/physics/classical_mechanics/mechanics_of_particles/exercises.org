@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       8dc610d8-4111-46b4-a505-cb10936345bb
+:END:
+#+title: Goldstein's Exercises Chapter 1

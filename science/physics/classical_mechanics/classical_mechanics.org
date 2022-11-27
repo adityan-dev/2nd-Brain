@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7f94b93b-7f00-4618-a580-043da3a05eac
+:END:
+#+title: Classical Mechanics
+#+filetags: :MOC:
+
+* [[id:5cb1ce89-3a9e-4554-bf5e-ee01b45f2a9f][Mechanics of Particles]]

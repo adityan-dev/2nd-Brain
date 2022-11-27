@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       7c40ad0f-7ed6-400e-a32e-885990ff91ba
+:END:
+#+title: Genralized Coordinates
