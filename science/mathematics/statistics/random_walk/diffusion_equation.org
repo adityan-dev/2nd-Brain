@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       05df8558-9358-4a47-a0cf-dc37c8d9b83f
+:END:
+#+title: Diffusion Equation

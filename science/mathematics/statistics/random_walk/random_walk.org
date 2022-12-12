@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       8b1a63f6-7168-4212-99c3-022b9b9db3b5
+:END:
+#+title: Random Walk
+
+Random walks are paths that take successive steps in random
+directions. They arise often in statistical mechanics: as partial sums of
+fluctuating quantities, as trajectories of particles undergoing repeated
+collisions, and as the shapes for long, linked systems like polymers. They
+introduce two kinds of emergent behavior.
+
+- an individual random walk, after a large number of steps, becomes fractal or scale invariant. [[id:99cc1c9f-f6e6-4561-b16f-3b755023e418][Universality and Scale Invariance]]
+
+- the endpoint of the random walk has a probability distribution that obeys a simple continuum law, the [[id:05df8558-9358-4a47-a0cf-dc37c8d9b83f][Diffusion Equation]].
+
+Both of these behaviors
+are largely independent of the microscopic details of the walk; they are
+universal. Random walks in an external field provide our first exam-
+ples of conserved currents, linear response, and Boltzmann distributions.
+
+Random walks neatly illustrate many of the themes and methods of statistical mechanics.

@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       7b7001f6-ba94-47a8-a38b-9d64b535a825
+:END:
+#+title: Work and Energy
+
+* Work Energy Theorem
+:PROPERTIES:
+:ID:       8ac0ed92-53ef-44b9-9fe9-c52856874165
+:END:
+
+Consider the work done by the external force \(\vec{F}\) upon the particle in going
+from point 1 to point 2. By definition, this work is
+
+\begin{align*}
+W_{12}=\int ^{2}_{1}\vec{F}\cdot d\vec{s}
+\end{align*}
+
+For constant mass (as will be assumed from now on unless otherwise specified),
+the integral becomes
+
+\begin{align*}
+\int \vec{F}\cdot d\vec{s}=m\int \dfrac{d\vec{v}}{dt}\cdot \vec{v}dt=\dfrac{m}{2}\int \dfrac{d}{dt}\left( v^{2}\right) dt\\
+W_{12}=\dfrac{m}{2}\left( v_{2}^{2}-v_{1}^{2}\right)
+\end{align*}
+
+The scalar quantity \(\dfrac{mv^{2}}{2}\) is called the kinetic energy of the particle and is de­
+noted by \(T\), so that the work done is equal to the change in the kinetic energy:
+
+\begin{align*}
+W_{12}=T_{2}-T_{1}
+\end{align*}
+
+* Conservative Force and Potential
+:PROPERTIES:
+:ID:       10e3c87e-9958-4d2a-8742-78a02ec15978
+:END:
+
+If the force field is such that the work \(W_{12}\) is the same for any physically
+possible path between points 1 and 2, then the force (and the system) is said to be
+/conservative/. An alternative description of a conservative system is obtained by
+imagining the particle being taken from point 1 to point 2 by one possible path
+and then being returned to point 1 by another path. The independence of \(W_{12}\) on
+the particular path implies that the work done around such a closed circuit is zero,
+i.e.:
+
+\begin{align*}
+\oint \vec{F}\cdot d\vec{s}=0
+\end{align*}

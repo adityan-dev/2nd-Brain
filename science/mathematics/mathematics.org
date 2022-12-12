@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       858c1a8b-a04a-4832-afc6-42136faa5cac
+:END:
+#+title: Mathematics
+#+filetags: :MOC:
+
+* Contents
+- [[id:a503ec5c-b1e1-4640-b7e8-2ee1d99c0eec][Statistics]]

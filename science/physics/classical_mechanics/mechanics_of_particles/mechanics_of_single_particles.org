@@ -51,17 +51,45 @@ is a sufficient approximation to an inertial system, while for some astronomical
 purposes it may be necessary to construct an inertial system (or inertial frame) by
 reference to distant galaxies.
 
-Many of the important conclusions of mechanics can be expressed in the form
-of conservation theorems, which indicate under what conditions various mechan­
-ical quantities are constant in time.
-
-
 
 * Conservation of Linear Momentum
 :PROPERTIES:
 :ID:       4c7243ba-bd06-413b-9902-7d9e5cd7a54e
 :END:
+
+Many of the important conclusions of mechanics can be expressed in the form
+of conservation theorems, which indicate under what conditions various mechan­
+ical quantities are constant in time.
+
+/If the total force, \(\vec{F}\), is zero, then the linear momentum, \(\vec{p}\), is conserved./
+
+\begin{align*}
+\vec{F}=\dfrac{d\vec{p}}{dt}=0\\
+\vec{p}=consvered
+\end{align*}
+
 * Conservation of Angular Momentum
 :PROPERTIES:
 :ID:       a8f69f2e-24ed-4a61-896c-e9542117b11a
 :END:
+The angular momentum of the particle about point origin , denoted by L, is defined as
+
+\begin{align*}
+\vec{L} = \vec{r} \times \vec{p}
+\end{align*}
+
+We now define the /moment of force/ or /torque/ about origin as
+
+\begin{align*}
+\vec{N} = \vec{r} \times \vec{F} = \dfrac{d\vec{L}}{dt}
+\end{align*}
+
+Note that both N and L depend on the origin , about which the moments are
+taken.
+
+/If the total torque, \(\vec{N}\), is zero, then the angular momentum, \(\vec{L}\), is conserved./
+
+\begin{align*}
+\vec{N}=\dfrac{d\vec{L}}{dt}=0\\
+\vec{L}=consvered
+\end{align*}

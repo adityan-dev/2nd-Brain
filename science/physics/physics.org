@@ -6,3 +6,4 @@
 
 * Contents
 - [[id:7f94b93b-7f00-4618-a580-043da3a05eac][Classical Mechanics]]
+- [[id:26197b39-8307-43ff-94ca-d01c05d84838][Statistical Mechanics]]
