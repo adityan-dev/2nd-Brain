@@ -4,7 +4,7 @@
 #+title: Random Walk
 
 Random walks are paths that take successive steps in random
-directions. They arise often in statistical mechanics: as partial sums of
+directions. They arise often in Statistical Mechanics as partial sums of
 fluctuating quantities, as trajectories of particles undergoing repeated
 collisions, and as the shapes for long, linked systems like polymers. They
 introduce two kinds of emergent behavior.
@@ -13,9 +13,8 @@ introduce two kinds of emergent behavior.
 
 - the endpoint of the random walk has a probability distribution that obeys a simple continuum law, the [[id:05df8558-9358-4a47-a0cf-dc37c8d9b83f][Diffusion Equation]].
 
-Both of these behaviors
-are largely independent of the microscopic details of the walk; they are
-universal. Random walks in an external field provide our first exam-
-ples of conserved currents, linear response, and Boltzmann distributions.
+Both of these behaviors are largely independent of the microscopic details of the walk; they are universal. Random walks in an external field provide our first examples of conserved currents, linear response, and Boltzmann distributions.
 
 Random walks neatly illustrate many of the themes and methods of statistical mechanics.
+
+- [[id:4cb731e9-4533-499b-bea4-c7ee690f8af1][James P Sethna Problems Chapter 2]]

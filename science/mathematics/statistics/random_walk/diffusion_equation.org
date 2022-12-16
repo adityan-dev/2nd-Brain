@@ -2,3 +2,212 @@
 :ID:       05df8558-9358-4a47-a0cf-dc37c8d9b83f
 :END:
 #+title: Diffusion Equation
+
+
+In the continuum limit of long length and time scales, simple behavior emerges from the ensemble of irregular, jagged random walks; their evolution is described by the diffusion equation,
+
+\begin{align*}
+\dfrac{\partial \rho }{\partial t}=D\nabla ^{2}\rho =D\dfrac{\partial ^{2}\rho}{\partial x^{2}}
+\end{align*}
+
+The diffusion equation can describe the probability density of an individual particle as it random walks through space ; if the particles are non interacting, the probability distribution of one particle describes the density of all particles.
+
+* Derivation of Diffusion Equation
+:PROPERTIES:
+:ID:       5862c55c-df9e-4bb7-b3ac-8a6c650154ce
+:END:
+Consider a general, uncorrelated random walk where at each time step \(\Delta t\) the particle’s position \(x\) changes by a step \(\ell\),
+
+\begin{align*}
+x\left( t+\Delta t\right) =x\left( t\right) +\ell\left( t\right)
+\end{align*}
+
+Let the probability distribution for each step be \(\chi\left(\ell\right)\).12 We will assume that \(\chi\) has mean zero and standard deviation \(a\),
+
+\begin{align*}
+\int \chi\left( z\right) \mathrm{d}z=1 \\
+\langle z\rangle = \int z\chi\left( z\right) \mathrm{d}z=0\\
+\langle z^{2}\rangle = \int z^{2}\chi \left( z\right) \mathrm{d}z=a^{2}
+\end{align*}
+
+What is the probability distribution \(\rho\left( x,t+\Delta t\right) \) at the next time step,
+given the probability distribution \(\rho \left( x',t\right) \)?
+
+For the particle to go from \(x'\) at time \(t\) to \(x\) at time \(t+\Delta t\),
+
+\begin{align*}
+\ell(t) = z = x - x' \\
+\chi(\ell) = \chi(x-x') = \chi(z) \\
+\mathrm{d}x' = - \mathrm{d}z
+\end{align*}
+
+
+Assuming the probability distribution is broad and slowly varying compared to the size and time of the individual steps, we can use taylor expansion on \(\rho\),
+
+\begin{align*}
+\rho\left( x,t+\Delta t\right)
+&=\int ^{\infty }_{-\infty }\rho\left( x',t\right) \chi\left( x-x'\right) \mathrm{d}x' \\
+&=\int ^{\infty }_{-\infty }\rho\left( x-z,t\right) \chi\left( z\right) \mathrm{d}z \\
+&\approx \int ^{\infty }_{-\infty }\left[ \rho \left( x,t\right) -z\dfrac{\partial \rho }{\partial x}+\dfrac{z^{2}}{2}\dfrac{\partial ^{2}\rho }{\partial x^{2}}\right] \chi\left( z\right) \mathrm{d}z \\
+&= \rho \left( x,t\right)\int ^{\infty }_{-\infty } \chi\left( z\right) \mathrm{d}z-\dfrac{\partial \rho }{\partial x}\int ^{\infty }_{-\infty } z\chi\left( z\right)+\dfrac{1}{2}\dfrac{\partial ^{2}\rho }{\partial x^{2}} \int ^{\infty }_{-\infty } z^{2}\chi\left( z\right) \mathrm{d}z \\
+&= \rho \left( x,t\right)+\dfrac{1}{2}\dfrac{\partial ^{2}\rho }{\partial x^{2}}a^{2} \\
+\end{align*}
+
+\begin{align*}
+\rho\left( x,t+\Delta t\right) = \rho \left( x,t\right) + \left(\dfrac{\partial\rho }{\partial t}\right) \Delta t
+\end{align*}
+
+Hence the diffusion equation and the diffusion coefficient,
+
+\begin{align*}
+\dfrac{\partial \rho }{\partial t}=D\dfrac{\partial ^{2}p}{\partial x^{2}} \\
+D=\dfrac{a^{2}}{2\Delta t}
+\end{align*}
+
+The diffusion equation applies to all random walks, so long as the probability distribution is broad and slowly varying compared to the size and time of the individual steps.
+
+* Diffusion Equation with External Force
+:PROPERTIES:
+:ID:       410fd7a7-8134-4903-a588-4b6b2da91ce3
+:END:
+In many applications one has an average drift term along with a random walk. In some cases there is naturally a nonzero mean for each step in the random walk. In other cases, there is an external force \(F\) that is biasing the steps to one side; the mean net drift for an unbiased random walk step of \(\ell = v_{0}\Delta t\) and mobility \(\gamma\),
+
+\begin{align*}
+\Delta x_{F}=\dfrac{1}{2}\left( \dfrac{F}{m}\right) \left( \Delta t\right) ^{2}=F\gamma \Delta t \\
+x\left( t+\Delta t\right) =x\left( t\right) +\ell\left( t\right) +F\gamma \Delta t\\
+\gamma =\dfrac{\Delta t}{2m}=\dfrac{D}{mv_{0}^{2}}
+\end{align*}
+
+Hence the diffusion equation is as follows,
+
+\begin{align*}
+\dfrac{\partial \rho }{\partial t}=-\gamma F\dfrac{\partial \rho }{\partial x}+D\dfrac{\partial ^{2}\rho }{\partial x^{2}}
+\end{align*}
+
+* Diffusion Currents
+:PROPERTIES:
+:ID:       3599c785-5b4d-4592-ad6c-b50360a00e1e
+:END:
+As the particles in our random walks move around, they are never created or destroyed; they are locally conserved.
+
+[[./img/2.png]]
+
+If \(\rho(x)\) is the density of a conserved quantity,  we may write its evolution law (see Fig) in terms of the current \(J(x)\) passing a given point \(x\),
+
+\begin{align*}
+\dfrac{\partial \rho }{\partial t}=-\dfrac{\partial J}{\partial x} \\
+J=\gamma F\rho -D\dfrac{\partial \rho }{\partial x}
+\end{align*}
+
+Here the current \(J\) is the rate at which stuff flows to the right through the point \(x\); since the stuff is conserved, the only way the density can change is by flowing from one place to another. The diffusion results from current conservation and a current that is proportional to the local gradient in the density.
+
+In the absence of external force,
+
+\begin{align*}
+J=-D\dfrac{\partial \rho }{\partial x}
+\end{align*}
+
+Particles diffuse (random walk) on average from regions of high density toward regions of low density.
+
+* Solution to the Diffusion Equation
+:PROPERTIES:
+:ID:       ca791c18-e782-4425-ad1b-84725ba0790a
+:END:
+There are 2 two important methods for solving the diffusion equation:
+
+- [[id:82332d56-a5af-44c2-a250-38593dc92659][Fourier Transformation Method to Solve Diffusion Equation]]
+- [[id:5ca5bcff-55a6-41d0-adb4-2c04e2e079ec][Green's Function Method to Solve Diffusion Equation]]
+
+Both rely upon the fact that the diffusion equation is linear; if a family of solutions \(\rho _{n}\left( x,t\right) \) are known, then any linear combination of these solutions \(\sum _{n}a_{n}\rho _{n}\left( x,t\right) \) is also a solution. If we can then expand the initial density \(\rho \left( x,0\right) =\sum _{n}a_{n}\rho \left( x,0\right) \), we have formally found the solution.
+
+Fourier methods are wonderfully effective computationally, because of fast Fourier transform (FFT) algorithms for shifting from the real space density to the solution space. Green’s function methods are more important for analytical calculations and as a source of approximate solutions.
+
+** Fourier Transformation Method to Solve Diffusion Equation
+:PROPERTIES:
+:ID:       82332d56-a5af-44c2-a250-38593dc92659
+:END:
+The Fourier transform method decomposes \(\rho\) into a family of plane wave solutions \(\widetilde{\rho}_{k}(t)e^{ikx} \) since the diffusion equation is homogeneous in space and the system is translationally invariant. See [[id:7b16c393-1d51-41b8-9fc3-668289c3f8a3][Fourier and Translational Symmetry]], under very general circumstances, a linear differential equation describing a translation invariant system will have solutions given by plane waves,
+
+\begin{align*}
+\rho(x,t) =  \widetilde{\rho}_{k}(t)e^{ikx}
+\end{align*}
+
+Plugging the plane wave in the diffusion equation, we get;
+
+\begin{align*}
+\dfrac{\mathrm{d}\widetilde{\rho}_{k}}{\mathrm{d}t}=-Dk^{2}\widetilde{\rho}_{k} \\
+\widetilde{\rho}_{k}(t) = \widetilde{\rho}_{k}(0) e^{-Dk^{2}t} =\widetilde{\rho}_{k}(0) e^{-\omega_{k}t} \\
+\omega_{k} = Dk^2
+\end{align*}
+
+The coefficients  \(\widetilde{\rho}_k\) are just the fourier transform of the initial density profile \(\rho(x,0)\),
+
+\begin{align*}
+\widetilde{\rho}_k(0) = \int ^{\infty }_{-\infty }\rho\left( x,0\right) e^{-ikx} \mathrm{d}x
+\end{align*}
+
+The general solution is given by the superposition of \(\widetilde{\rho}_k\) for all different wavevectors \(k\) (inverse fourier transform),
+
+\begin{align*}
+\rho \left( x,t\right) =\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\widetilde{\rho}_{k}\left( 0\right) e^{ikx}e^{-\omega _{k}t}\mathrm{d}k
+\end{align*}
+
+The short wavelength parts of \(\rho\) are “squelched” as time \(t\) evolves, with wavevector \(k\) being suppressed by a factor \(e^{-\omega _{k}t}\).
+
+** Green's Function Method to Solve Diffusion Equation
+:PROPERTIES:
+:ID:       5ca5bcff-55a6-41d0-adb4-2c04e2e079ec
+:END:
+The Green’s function method decomposes \(\rho\) into a family of solutions \(G(x-y,t)\) where \(G\) describes the evolution of an initial state concentrated at one point, here representing the diffusing particles all starting at a particular point y.
+
+Let us first consider the case where all particles start at the origin. Let us define the Green’s function G(x, t) to be the time evolution of the density \(G(x,0) = \delta(x)\) with all the particles at the origin. Since \(G(x,t)\) satisfies the diffusion equation, taking the fourier and the inverse fourier transforms respectively,
+
+\begin{align*}
+\widetilde{G}_k(0)
+&= \int G\left( x,0\right) e^{ikx}\mathrm{d}x \\
+&= \int \delta\left( x\right) e^{ikx}\mathrm{d}x \\
+&=1
+\end{align*}
+
+\begin{align*}
+G\left( x,t\right)
+&=\dfrac{1}{2\pi }\int e^{ikx}\widetilde{G}_{k}\left( 0\right) e^{-\omega_{k}t}\mathrm{d}k \\
+&=\dfrac{1}{2\pi }\int e^{ikx} e^{-\omega_{k}t}\mathrm{d}k \\
+&= \dfrac{1}{\sqrt{4\pi Dt}}\exp \left( \dfrac{-x^{2}}{4Dt}\right)
+\end{align*}
+
+Hence the Green's function for the diffusion equation, directly tells us the distribution of the endpoints of random walks centered at the origin,
+
+\begin{align*}
+G\left( x,t\right) = \dfrac{1}{\sqrt{4\pi Dt}}\exp \left( \dfrac{-x^{2}}{4Dt}\right)
+\end{align*}
+
+The above Gaussian explains /central limit theorem/. the sum of many independent random variables has a probability distribution that converges to a Gaussian.
+
+[[./img/3.png]]
+
+The Green's function gives us the whole probability distribution of distances. For a random walk of uniform step \(L\),
+
+\begin{align*}
+\sigma(t) = \sqrt{\langle x^2\rangle} = \sqrt{2Dt} \quad (Gaussian) \\
+D = \dfrac{L^2}{2\Delta t} \\
+\sigma(t) = L\sqrt{\dfrac{t}{\Delta t}} = L\sqrt{N} \\
+\end{align*}
+
+Finally, since the diffusion equation has translational symmetry, we can solve for the evolution of random walks centered at any point y; the time evolution of an initial condition \(\delta(x-y)\) is \(G(x-y,t)\). Since we can write any initial condition \(\rho(x,0)\) as a superposition of \(\delta\)-functions:
+
+\begin{align*}
+\rho \left( x,0\right)
+&= \int \rho\left( y,0\right) \delta \left( x-y\right) \mathrm{d}y \\
+&= \int \rho\left( y,0\right) G \left( x-y,0\right) \mathrm{d}y
+\end{align*}
+
+we can write a general solution \(\rho(x,t)\) to the diffusion equation:
+
+\begin{align*}
+\rho\left( x,t\right)
+&= \int \rho \left( y,0\right) G\left( x-y,t\right) \mathrm{d}y \\
+&= \dfrac{1}{\sqrt{4\pi Dt}}\int \rho \left( y,0\right) \exp \left( -\dfrac{\left( x-y\right) ^{2}}{4Dt}\right) \mathrm{d}y
+\end{align*}
+
+This equation states that the current value of the density is given by the original values of the density in the neighborhood, smeared sideways (convolved) with the function \(G\). Thus by writing \(\rho\) as a superposition of point sources, we find that the diffusion equation smears out all the sharp features in the initial condition. The distribution after time \(t\) is the initial distribution averaged over a range given by the typical random walk distance \(\sqrt{2Dt}\).

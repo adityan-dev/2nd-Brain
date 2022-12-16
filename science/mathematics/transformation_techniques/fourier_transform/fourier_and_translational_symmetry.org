@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       7b16c393-1d51-41b8-9fc3-668289c3f8a3
+:END:
+#+title: Fourier and Translational Symmetry
+
+Define \(\mathcal{T}_{\Delta}\), an operator which takes function space into itself and acts to shift the function a distance \(\Delta\) to the right.
+
+\begin{align*}
+\mathcal{T}_{\Delta}\{ f \} (x) = f(x-\Delta)
+\end{align*}
+
+ \(\mathcal{T}_{\Delta}\) being a linear operator, eigenvalues \(\lambda_k\) and eigenstates (eigenfunctions) \(f_k\) are as follows,
+
+
+\begin{align*}
+\mathcal{T}_{\Delta}\{ f \} (x) = f(x-\Delta) = \lambda_k f_k(x) \\
+f_k(x) = e^{ikx} \\
+\lambda_k = e^{-ik\Delta}
+\end{align*}
+
+Let \(\mathcal{U}_t\) be the linear time-evolution operator for a translationally invariant equation (like diffusion, heat, Schrödinger's equation). Because our system is translation invariant, translated solutions are also solutions for translated initial conditions (\(\mathcal{U}_{t}\) is not translation in time, but evolution in time.):
+
+\begin{align*}
+\mathcal{U}_t\{f(x,\tau)\} = f(x, \tau+t)\\
+\mathcal{T}_{\Delta}\{\mathcal{U}_t\{f\}\} = \mathcal{U} _t\{\mathcal{T}_{\Delta}\{f\}\}
+\end{align*}
+
+- /"The time evolution of an eigenfunction must have the same eigenvalue λ"/
+
+\begin{align*}
+\mathcal{T}_{\Delta} \{f_k(x,t)\}
+&= \mathcal{T}_{\Delta}\{\mathcal{U}_t\{f_k(x,0)\}\} \\
+&= \mathcal{U} _t\{\mathcal{T}_{\Delta}\{f_k(x,0)\}\}  \\
+&= \mathcal{U} _t\{\lambda_kf_k(x,0)\}  \\
+&= \lambda_k \mathcal{U} _t\{f_k(x,0)\}  \\
+&= \lambda_kf_k(x,t)
+\end{align*}
+
+The fact that the different eigenvalues do not mix under time evolution is precisely what made our calculation work; time evolving \(A_{0}e^{ikx}\) had to give a multiple \(A(t)e^{ikx}\) since there is only one eigenfunction of translations with the given eigenvalue. Once we have reduced the partial differential equation to an ordinary differential equation for a few eigenstate amplitudes, the calculation becomes feasible.
+
+Some examples,
+- The invariance of isotropic systems (like the hydrogen atom) under the rotation group leads naturally to solutions involving spherical harmonics with definite angular momenta \(\ell\) and \(m\).
+- The invariance of the strong interaction under SU(3) leads naturally to the 8-fold way families of mesons and baryons.
+- The invariance of the Universe under the Poincaré group of space-time symmetries (translations, rotations, and Lorentz boosts) leads naturally to particles with definite mass and spin!

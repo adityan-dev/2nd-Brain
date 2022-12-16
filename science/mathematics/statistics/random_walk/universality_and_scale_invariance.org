@@ -4,8 +4,103 @@
 #+title: Universality and Scale Invariance
 
 
-Statistical mechanics often demands sums or averages of a series of fluctuating quantities,
+Statistical Mechanics often demands sums or averages of a series of fluctuating quantities,
 
 \begin{align*}
 s_{N} = \sum_{i=1}^{N}\ell_{i}
 \end{align*}
+
+
+A good measure of \(s_{N}\) is root-mean-square (RMS) of the sum, \(\sqrt{\langle s_{N}^{2}\rangle }\), instead of average since \(\langle s_{N}\rangle=0\).
+
+Some examples include,
+
+- The energy of a material is a sum over the energies of molecules composing the material.
+- The grade on exam is the sum of the scores on many individual questions.
+
+* Examples of Random Walk
+:PROPERTIES:
+:ID:       4b87bfb0-b0fd-49c9-86d4-7fd8f053054d
+:END:
+** Coin flips
+:PROPERTIES:
+:ID:       9af53aa5-dd29-4106-ba1b-3b5f8bb78ea5
+:END:
+Consider flipping a coin \(N\) times and recording the difference \(s_{N}\) between the number of heads and tails found. Each coin flip contributes \(\ell_{i}=\pm1\) to the total.
+
+\begin{align*}
+\langle s_{1}^{2}\rangle =1=\dfrac{1}{2}\left( -1\right) ^{2}+\dfrac{1}{2}\left( 1\right) ^{2}\\
+\langle s_{2}^{2}\rangle =2=\dfrac{1}{4}\left( -2\right) ^{2}+\dfrac{1}{2}\left( 0\right) ^{2}+\dfrac{1}{4}\left( 2\right) ^{2}\\
+\langle s_{3}^{2}\rangle =3=\dfrac{1}{8}\left( -3\right) ^{2}+\dfrac{3}{8}\left( -1\right) ^{2}+\dfrac{3}{8}\left( 1\right) ^{2}+\dfrac{1}{8}\left( 3\right) ^{2}
+\end{align*}
+
+from the recurring pattern we can conclude that, RMS of (heads − tails) is equal to the square root of the number of coin flips:
+
+
+\begin{align*}
+\langle s_{N}^{2}\rangle =\langle \left( s_{N-1}+\ell_{N}\right) ^{2}\rangle\\
+\langle s_{N}^{2}\rangle =\langle s_{N-1}^{2}\rangle +2\langle s_{N-1}\ell_{N}\rangle +\langle \ell_{N}^{2}\rangle \\
+\langle s_{N}^{2}\rangle =\langle s_{N-1}^{2}\rangle +1\\
+\downarrow \quad \quad \\
+\langle s_{N}^{2}\rangle =N
+\end{align*}
+
+\begin{align*}
+\sigma_{s}=\sqrt{\langle s_{N}^{2}\rangle }=\sqrt{N}
+\end{align*}
+
+** Drunkard's Walk
+:PROPERTIES:
+:ID:       622b0c54-96eb-4868-b8b2-63f2f20dca9a
+:END:
+Random walkss also arise as trajectories that undergo successive random collisions or turns. It is more convenient to study steps at regular time intervals, so we will consider the classic problem of a drunkard’s walk.
+
+The drunkard is presumed to start at a lamp-post at \(x=y=0\). He takes steps \(\ell_{N}\) each of length \(L\), at regular time intervals. Because he is drunk, the steps are in completely random directions, each uncorrelated with the previous steps. This lack of correlation says that the average dot product between any two steps \(\ell_{m}\) and \(\ell_{n}\) is zero, since all relative angles \(\theta\) between the two directions are equally likely:
+
+\begin{align*}
+\langle s_{N}^{2}\rangle =\langle \left( s_{N-1}+\ell_{N}\right) ^{2}\rangle\\
+\langle s_{N}^{2}\rangle =\langle s_{N-1}^{2}\rangle +2\langle s_{N-1}\ell_{N}\rangle +\langle \ell_{N}^{2}\rangle \\
+\langle s_{N}^{2}\rangle =\langle s_{N-1}^{2}\rangle +L^{2}\\
+\downarrow \quad \quad \\
+\langle s_{N}^{2}\rangle =NL^{2}
+\end{align*}
+
+so the RMS distance moved is,
+
+\begin{align*}
+\sigma_{s}=\sqrt{\langle s_{N}^{2}\rangle }=\sqrt{N}L
+\end{align*}
+
+** Polymers and Random Walk
+:PROPERTIES:
+:ID:       9b9b264a-4967-490b-9f54-dd9401d1e928
+:END:
+Random walks arise as the shapes for polymers. Polymers are long molecules (like DNA, RNA, proteins, and many plastics) made up of many small units (called monomers) attached to one another in a long chain. Temperature can introduce fluctuations in the angle between two adjacent monomers; if these fluctuations dominate over the energy,  the polymer shape can form a random walk. Here each step does not increase the time, but rather advances the monomer number along the chain by one.
+
+The random walks formed by isolated polymers are not the same as those in our first two examples; they are in a different universality class. This is because the polymer cannot intersect itself; a walk that would cause two monomers to overlap is not allowed. Polymers undergo self-avoiding random walks. In two and three dimensions, it turns out that the effects of these self-intersections is not a small, microscopic detail, but changes the properties of the random walk in an essential way.
+
+These forbidden intersections would often arise on far separated regions of the polymer, and that they change the dependence of (RMS), Hence the power law,
+
+\begin{align*}
+\sqrt{\langle s_{N}^{2}\rangle } \sim N^{\nu}
+\end{align*}
+
+- \(\nu=0.5\) : Ordinary Random Walk.
+- \(\nu=0.75\) : 2D Random Walk with forbidden intersections.
+- \(\nu=0.588\) : 3D Random Walk with forbidden intersections.
+
+* Scale invariance
+:PROPERTIES:
+:ID:       0b0ba1b1-b12d-4467-8b16-28b82b76b47e
+:END:
+Random walks form paths which look jagged and scrambled. they are so jagged that if you blow up a small corner of one, the blown-up version looks just as jagged. Each of the blown-up random walks is different, just as any two random walks of the same length are different, but the ensemble of random walks of length \(N\) looks much like that of length \(N/4\), until \(N\) becomes small enough that the individual steps can be distinguished. Random walks are scale invariant: they look the same on all scales.
+
+[[file:./img/1.png]]
+
+* Universality
+:PROPERTIES:
+:ID:       b27b4beb-3b49-4096-ad13-a66c2a33d405
+:END:
+On scales where the individual steps are not distinguishable (and any correlations between steps is likewise too small to see) we find that    all random walks look the same.
+
+The RMS \(\sigma_{s}\) universally represents the property of the Random walks. The dependence of RMS on \(N\) are given in the examples.
