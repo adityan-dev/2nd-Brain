@@ -122,6 +122,33 @@ T = N\tau &= 8.33 \times 10^{11} \mathrm{s} \\
 :PROPERTIES:
 :ID:       968bc5e6-66d1-4ecc-bd93-f0a65666e226
 :END:
+
+[[./img/5.png]]
+
+Inside your cells, there are several different molecular motors, which move and pull and copy (Fig). There are molecular motors which contract your muscles, there are motors which copy (transcribe) your DNA into RNA and copy (translate) your RNA into protein, there are motors which transport biomolecules around in the cell. All of these motors share some common features:
+1. They move along some linear track (microtubule, DNA, . . . ), hopping forward in discrete jumps between low-energy positions;
+2. They consume energy (burning ATP or NTP) as they move, generating an effective force pushing them forward;
+3. Their mechanical properties can be studied by seeing how their motion changes as the external force on them is changed.
+For transcription of DNA into RNA, the motor moves on average one base pair (A, T, G, or C) per step; \(\Delta x\) is about 0.34nm. The motor must cross an asymmetric energy barrier as it attaches another nucleotide to the RNA (Fig). Wang and co-authors (Fig) showed that the motor stalls at an external force of about 27pN (pico-Newton).
+
+** At that force, what is the energy difference between neighboring wells due to the external force from the bead? Let us assume that this stall force is what is needed to balance the natural force downhill that the motor develops to propel the transcription process. What does this imply about the ratio of the forward rate to the backward rate, in the absence of the external force from the laser tweezers, at a temperature of 300 K?
+
+The population in a well of free energy \(G\) is proportional to \(\exp{(-G/k_BT)}\). If the population was in thermal equilibrium the net flux would be equal going forward and backward; the net flux out of a well is the population in that well times the rate, a given motor does not know whether it is part of an equilibrium ensemble.
+
+[[./img/6.png]]
+
+The energy (or rather the Gibbs free energy) for the molecular motor as a function of distance along the DNA. The motor is in a low-energy state just after it transcribes one nucleotide into RNA. The energy barrier \(V\) needs to be crossed in order to transcribe the next nucleotide. The energy asymmetry \(\delta\) is a sum of contributions from the bonding of the RNA nucleotide, the burning of ATP, and the detachment of the apparatus at the completed end. The experiment changes this asymmetry by adding an external force tilting the potential to the left, retarding the transcription.
+
+The natural force downhill is coming from the (Fig)chemical reactions which accompany the motor moving one base pair; the motor burns up an NTP molecule into a PPi molecule, and attaches a nucleotide onto the RNA. The net energy from this reaction depends on details, but varies between about 2 and 5 times 10−20 J. This is actually a Gibbs free energy difference, but for this exercise treat it as just an energy difference.
+
+** The motor is not perfectly efficient; not all the chemical energy is available as motor force. From the answer above, give the efficiency of the motor as the ratio of force-times-distance produced to energy consumed, for the range of consumed energies given.
+
+Many of the models for these motors are based on Feynman’s /Ratchet and pawl/ discussion  where he (presciently) speculates about how gears and ratchets would work on a molecular level.
+
+[[./img/7.png]]
+
+The laser beam is focused at a point (the laser trap); the polystyrene bead is pulled (from dielectric effects) into the intense part of the light beam. The track is a DNA molecule attached to the bead, the motor is an RNA polymerase molecule, and the force is applied by a glass cover slip to which the motor is attached. As the motor copies DNA onto RNA, it pulls the DNA track toward itself, dragging the bead out of the trap, generating a force resisting the motion.
+
 * (2.4) Perfume walk
 :PROPERTIES:
 :ID:       53165eb8-4c2d-4519-a762-08b613b31018
